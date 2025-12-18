@@ -1,0 +1,376 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #3949ab;
+    --primary-gradient: linear-gradient(135deg, #3949ab 0%, #283593 100%);
+    --accent-color: #ff6f00;
+    /* Amber/Orange for CTA */
+    --accent-gradient: linear-gradient(45deg, #ff6f00 0%, #ff8f00 100%);
+    --text-color: #333;
+    --bg-color: #f4f6f8;
+}
+
+/* Accent Utilities */
+.accent-text {
+    color: var(--accent-color) !important;
+}
+
+/* Materialize Form Field Overrides for Accent */
+input:not([type]):focus:not([readonly]),
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=url]:not(.browser-default):focus:not([readonly]),
+input[type=time]:not(.browser-default):focus:not([readonly]),
+input[type=date]:not(.browser-default):focus:not([readonly]),
+input[type=datetime]:not(.browser-default):focus:not([readonly]),
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]),
+input[type=tel]:not(.browser-default):focus:not([readonly]),
+input[type=number]:not(.browser-default):focus:not([readonly]),
+input[type=search]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid var(--accent-color) !important;
+    box-shadow: 0 1px 0 0 var(--accent-color) !important;
+}
+
+input:not([type]):focus:not([readonly])+label,
+input[type=text]:not(.browser-default):focus:not([readonly])+label,
+input[type=password]:not(.browser-default):focus:not([readonly])+label,
+input[type=email]:not(.browser-default):focus:not([readonly])+label,
+input[type=url]:not(.browser-default):focus:not([readonly])+label,
+input[type=time]:not(.browser-default):focus:not([readonly])+label,
+input[type=date]:not(.browser-default):focus:not([readonly])+label,
+input[type=datetime]:not(.browser-default):focus:not([readonly])+label,
+input[type=datetime-local]:not(.browser-default):focus:not([readonly])+label,
+input[type=tel]:not(.browser-default):focus:not([readonly])+label,
+input[type=number]:not(.browser-default):focus:not([readonly])+label,
+input[type=search]:not(.browser-default):focus:not([readonly])+label,
+textarea.materialize-textarea:focus:not([readonly])+label {
+    color: var(--accent-color) !important;
+}
+
+.input-field .prefix.active {
+    color: var(--accent-color) !important;
+}
+
+/* Gradient Utilities */
+.bg-gradient-primary {
+    background: var(--primary-gradient) !important;
+}
+
+.bg-gradient-accent {
+    background: var(--accent-gradient) !important;
+}
+
+.bg-gradient-teal {
+    background: linear-gradient(135deg, #009688 0%, #004d40 100%) !important;
+}
+
+.bg-gradient-indigo {
+    background: linear-gradient(135deg, #3949ab 0%, #1a237e 100%) !important;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* Navbar */
+nav {
+    background: #fff;
+    /* Default white */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+nav.nav-gradient {
+    background: var(--primary-gradient);
+}
+
+nav .brand-logo {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+nav ul a {
+    color: #546eff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul a:hover {
+    color: var(--accent-color);
+}
+
+/* Buttons */
+.btn,
+.btn-large,
+.btn-small {
+    background: var(--primary-gradient);
+    border-radius: 50px;
+    /* Pill shape */
+    box-shadow: 0 4px 15px rgba(57, 73, 171, 0.3);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover,
+.btn-large:hover,
+.btn-small:hover {
+    background: linear-gradient(135deg, #283593 0%, #1a237e 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(57, 73, 171, 0.4);
+}
+
+.btn-accent {
+    background: var(--accent-gradient) !important;
+    box-shadow: 0 4px 15px rgba(255, 111, 0, 0.3) !important;
+}
+
+.btn-accent:hover {
+    background: linear-gradient(45deg, #e65100 0%, #f57c00 100%) !important;
+    box-shadow: 0 8px 20px rgba(255, 111, 0, 0.4) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 600px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    opacity: 0.95;
+    font-weight: 300;
+}
+
+/* Search Box */
+.search-box {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 10px 10px 10px 30px;
+    border-radius: 50px;
+    display: flex;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.search-box input {
+    border: none !important;
+    margin-bottom: 0 !important;
+    padding-left: 10px !important;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.search-box button {
+    border-radius: 40px;
+    background: var(--primary-gradient);
+    height: 50px;
+    line-height: 50px;
+    padding: 0 40px;
+}
+
+/* Property Cards */
+.card.property-card {
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+    background: #fff;
+}
+
+.card.property-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card.property-card .card-image {
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card.property-card .card-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card.property-card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.card.property-card .card-content {
+    padding: 25px;
+}
+
+.card.property-card .card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.card.property-card .price {
+    color: var(--primary-color);
+    font-weight: 800;
+    font-size: 1.2rem;
+    display: block;
+    margin-top: 5px;
+}
+
+.card.property-card .location {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.card.property-card .card-action {
+    background: transparent;
+    border-top: 1px solid #f0f0f0;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card.property-card .card-action a {
+    color: var(--primary-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    margin-right: 0;
+    letter-spacing: 0.5px;
+}
+
+.card.property-card .icons span {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 10px;
+    color: #95a5a6;
+    font-size: 0.9rem;
+}
+
+.card.property-card .icons i {
+    font-size: 1.1rem;
+    margin-right: 4px;
+}
+
+/* Floating Action Button on Card */
+.btn-floating.halfway-fab {
+    background: var(--accent-gradient);
+}
+
+.btn-floating.halfway-fab:hover {
+    background: linear-gradient(45deg, #e65100 0%, #f57c00 100%);
+}
+
+/* Modals */
+.modal {
+    border-radius: 20px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}
+
+.modal .modal-content {
+    padding: 40px;
+}
+
+/* Dashboard Widgets */
+.dashboard-widget {
+    border-radius: 15px;
+    padding: 25px;
+    color: white;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    background: var(--primary-gradient);
+    transition: transform 0.3s ease;
+}
+
+.dashboard-widget:hover {
+    transform: translateY(-5px);
+}
+
+.dashboard-widget.accent {
+    background: var(--accent-gradient);
+}
+
+.dashboard-widget.teal-gradient {
+    background: linear-gradient(135deg, #009688 0%, #00695c 100%);
+}
+
+.dashboard-widget i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 5rem;
+    opacity: 0.2;
+    transition: transform 0.3s ease;
+}
+
+.dashboard-widget:hover i {
+    transform: translateY(-50%) scale(1.1) rotate(10deg);
+}
+
+.dashboard-widget .count {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1;
+}
+
+/* Typewriter Effect */
+.typewriter-cursor::after {
+    content: '|';
+    animation: blink 1s step-start infinite;
+    color: var(--accent-color);
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Smooth Slider Transition Override */
+.slider .slides li {
+    transition: opacity 1s ease-in-out !important;
+}
